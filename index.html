@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio de Karamo Sylla</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="dark-mode">
+    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+        <i data-feather="menu"></i>
+    </button>
+    
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#" class="mobile-menu-item" data-section="About">À propos</a>
+        <a href="#" class="mobile-menu-item" data-section="Resume">CV</a>
+        <a href="#" class="mobile-menu-item" data-section="Works">Projets</a>
+        <a href="#" class="mobile-menu-item" data-section="Contact">Contact</a>
+    </div>
+    
+    <button class="toggle-button" onclick="toggleMode()">
+        <i data-feather="sun" id="mode-icon"></i>
+    </button>
+
+    <div class="container">
+        <div class="left-section">
+            <div class="profile-card">
+                <div class="profile-img-container">
+                    <img src="https://i.imgur.com/yRoIPY0.png" alt="Karamo Sylla" class="profile-img">
+                    <div class="profile-img-border"></div>
+                </div>
+                <h2 class="text-2xl font-bold mt-4 text-center">Karamo Sylla</h2>
+                <h3 class="text-blue-400 text-center text-sm mt-2">Ingénieur en Intelligence Artificielle | 🔧 Expert en Automatisation IA et Développement d'Agents IA Autonomes</h3>
+            </div>
+            
+            <div class="social-card">
+                <div class="social-icons">
+                    <a href="https://www.youtube.com/@aibykaramoo" class="social-icon youtube">
+                        <svg xmlns="" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                    </a>
+                    <a href="https://www.instagram.com/ai_by_karamoo/" class="social-icon instagram">
+                        <svg xmlns="" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.2091.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/syllakaramo/" class="social-icon linkedin">
+                        <svg xmlns="" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="contact-card">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i data-feather="phone"></i>
+                        </div>
+                        <div class="contact-text">
+                            <span class="contact-label">Phone</span>
+                            <span class="contact-value">+212 0769821111</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i data-feather="mail"></i>
+                        </div>
+                        <div class="contact-text">
+                            <span class="contact-label">Email</span>
+                            <span class="contact-value">contactkaramo@gmail.com</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i data-feather="map-pin"></i>
+                        </div>
+                        <div class="contact-text">
+                            <span class="contact-label">Localisation</span>
+                            <span class="contact-value">Casablanca, Maroc</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="download-card">
+                <a href="https://drive.google.com/file/d/1cRsR3FBOLSwKmXhtIUa9vCZPbHzIP2m2/view?usp=drive_link" class="download-btn" target="_blank">
+                    <i data-feather="download"></i>
+                    <span>Téléchargez Le CV</span>
+                </a>
+            </div>
+        </div>
+
+        <div id="about" class="center-section">
+            <div class="title-container">
+                <h1 class="text-3xl font-bold">A propos</h1>
+                <div class="blue-line"></div>
+            </div>
+            <p class="mt-4">Je suis Karamo Sylla, Ingénieur en Intelligence Artificielle et Fondateur de AI Brainetic Agency, une Agence dédiée à l'accompagnement des coachs et formateurs francophones dans l'implémentation de l'intelligence artificielle au sein de leur business, afin de les aider à atteindre de nouveaux sommets de performance et d'efficacité.</p>
+            
+            <h2 class="text-2xl font-semibold mt-8 mb-4">Ce que nous Faisons chez Brainetic</h2>
+            <div class="services">
+                <div class="service bg-automation">
+                    <i data-feather="settings" class="icon-automation"></i>
+                    <h2 class="text-xl font-semibold mb-2">Automatisations des flux de travail</h2>
+                    <h3 class="text-sm">Nous concevons et implémentons des flux d'automatisations personnalisés qui optimisent vos processus métiers, réduisent les tâches répétitives, et améliorent l'efficacité opérationnelle, vous permettant de vous concentrer sur ce qui compte vraiment.</h3>
+                </div>
+            
+                <div class="service bg-cpu">
+                    <i data-feather="cpu" class="icon-cpu"></i>
+                    <h2 class="text-xl font-semibold mb-2">Développement d'Agents IA</h2>
+                    <h3 class="text-sm">Nous développons des agents d'intelligence artificielle sur mesure qui sont capables d'interagir de manière autonome avec vos systèmes, clients ou données, afin de fournir des solutions intelligentes et proactives à vos défis commerciaux.</h3>
+                </div>
+                <div class="service bg-message">
+                    <i data-feather="message-circle" class="icon-message"></i>
+                    <h2 class="text-xl font-semibold mb-2">Développement de chatbot IA </h2>
+                    <h3 class="text-sm">
+                        - service client<br>
+                        - génération de leads<br>
+                        - qualification des prospects<br>
+                        - Recommadations de produits
+                    </h3>
+                </div>
+            </div>
+
+            <h2 class="text-2xl font-semibold mt-12 mb-4 text-center">Coachs et Formateurs Accompagnés</h2>
+            <div class="modern-frame p-8 mt-6 overflow-hidden">
+                <div class="logo-carousel">
+                    <div class="logo-slide">
+                    </div>
+                    <div class="logo-slide">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="Resume" class="center-section hidden">
+            <div class="resume-container">
+                <div class="resume-header">
+                    <h1 class="resume-title">Mon CV</h1>
+                    <p class="resume-subtitle">Expert en Intelligence Artificielle & Automatisation IA et Développement d'Agents IA Autonomes</p>
+                </div>
+                
+                <div class="resume-content">
+                    <div class="resume-section">
+                        <h2 class="section-title"><i data-feather="briefcase"></i>Expérience Professionnelle</h2>
+
+                        <div class="resume-item">
+                            <h3 class="resume-item-title">AI Generative Consultant</h3>
+                            <h4 class="resume-item-subtitle"><a href="https://www.aicrafters.com/en/" target="_blank">AI Crafters</a></h4>
+                            <p class="resume-item-date"> Depuis Juin 2023 </p>
+                            <p class="resume-item-description">
+                                • Spécialisation en automatisation des flux de travail : Mise en place de systèmes d'automatisation avancés, utilisant l'IA pour optimiser les processus métiers tels que la veille concurrentielle, marketing, et partenariale, au sein de grandes entreprises.<br>
+                                • Conception de cas d'utilisation spécifiques : Développement de solutions IA personnalisées pour répondre aux besoins uniques des entreprises, assurant une intégration fluide et efficace de l'IA dans leurs opérations.<br>
+                                • Automatisation du service client : Implémentation de systèmes IA permettant une gestion automatisée des emails entrants, offrant des réponses instantanées et personnalisées, améliorant ainsi l'efficacité et la satisfaction client.
+                            </p>
+                        </div>
+
+                        <div class="resume-item">
+                            <h3 class="resume-item-title">Fondateur & CEO</h3>
+                            <h4 class="resume-item-subtitle">AI Brainetic Agency
+                            <p class="resume-item-date">2024 - Présent</p>
+                            <p class="resume-item-description">
+                                • Fondation et direction d'une agence spécialisée dans l'intégration de l'intelligence artificielle pour les coachs et formateurs francophones.<br>
+                                • Développement de solutions IA personnalisées pour optimiser les processus d'apprentissage<br>
+                                • Conception et implémentation d'agents d'intelligence artificielle capables de réaliser des tâches complexes et répétitives de manière autonome.<br>
+                                • Consultation stratégique auprès de clients sur l'intégration de l'IA dans leurs pratiques
+                            </p>
+                        </div>
+
+                        <div class="resume-item">
+                            <h3 class="resume-item-title">Freelance en Intelligence Artificielle</h3>
+                            <h4 class="resume-item-subtitle">Freelance </h4>
+                            <p class="resume-item-date">2022 - 2023</p>
+                            <p class="resume-item-description">
+                                • Mise en place d'une base de prompt pour l'entreprise AI crafters, optimisant les interactions IA<br>
+                                • Développement de chatbots intelligents pour améliorer le service client<br>
+                                • Développement d'une base de Persona AI pour affiner la compréhension des profils utilisateurs par l'IA
+                            </p>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="resume-section">
+                        <h2 class="section-title"><i data-feather="book"></i>Formation</h2>
+                        <div class="resume-item">
+                            <h3 class="resume-item-title"> Cycle d'Ingénieur en Big Data & Intelligence Artificielle </h3>
+                            <h4 class="resume-item-subtitle">Ecole Nationale des Sciences Appliquées de Tétouan (ENSA)</h4>
+                            <p class="resume-item-date">2023 - En cours</p>
+                        </div>
+                        <div class="resume-item">
+                            <h3 class="resume-item-title">Classes Préparatoires Scientifiques </h3>
+                            <h4 class="resume-item-subtitle">Ecole Nationale des Sciences Appliquées de Tétouan (ENSA) </h4>
+                            <p class="resume-item-date">2021 - 2023</p>
+                        </div>
+                    </div>
+                    
+                    <div class="resume-section">
+                        <h2 class="section-title"><i data-feather="award"></i>Compétences Techniques</h2>
+                        <div class="skills-container" id="skills-container">
+                        </div>
+                    </div>
+                    
+                    <div class="resume-section">
+                        <h2 class="section-title"><i data-feather="globe"></i>Langues</h2>
+                        <div class="languages-list">
+                            <span class="language-item">Bilingue en Français</span>
+                            <span class="language-item">Anglais Professionnel </span>
+                        </div>
+                    </div>
+                    
+                    <div class="resume-section">
+                        <h2 class="section-title"><i data-feather="user"></i>Qualités Personnelles</h2>
+                        <div class="soft-skills-list">
+                            <span class="soft-skill-item"><i data-feather="check-circle"></i>Leadership</span>
+                            <span class="soft-skill-item"><i data-feather="check-circle"></i>Créativité</span>
+                            <span class="soft-skill-item"><i data-feather="check-circle"></i>Résolution de problèmes</span>
+                            <span class="soft-skill-item"><i data-feather="check-circle"></i>Travail d'équipe</span>
+                            <span class="soft-skill-item"><i data-feather="check-circle"></i>Adaptabilité</span>
+                            <span class="soft-skill-item"><i data-feather="check-circle"></i>Communication</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="Contact" class="center-section hidden">
+            <div class="bg-gray-800 bg-opacity-50 backdrop-blur-xl rounded-3xl p-8 w-full max-w-2xl shadow-2xl mx-auto">
+                <h2 class="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 text-center mb-2">Contactez-moi</h2>
+                <p class="text-center text-gray-300 mb-8">Je suis impatient d'en savoir plus sur votre projet !</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                    <div class="contact-info-card">
+                        <i data-feather="mail"></i>
+                        <h3>Email</h3>
+                        <p>contactkaramo@gmail.com</p>
+                    </div>
+                    <div class="contact-info-card">
+                        <i data-feather="map-pin"></i>
+                        <h3>Localisation</h3>
+                        <p>Casablanca, Maroc</p>
+                    </div>
+                    <div class="contact-info-card">
+                        <i data-feather="phone"></i>
+                        <h3>Téléphone</h3>
+                        <p>+212 0769821111</p>
+                    </div>
+                </div>
+                
+                <form id="contactForm" class="space-y-6" novalidate>
+                    <div class="input-effect">
+                        <input type="text" id="name" name="name" placeholder=" " required minlength="2" class="w-full h-12" />
+                        <label for="name">Votre Prénom</label>
+                        <div class="error-message">Veuillez entrer votre Prénom</div>
+                    </div>
+                    
+                    <div class="input-effect">
+                        <input type="email" id="email" name="email" placeholder=" " required class="w-full h-12" />
+                        <label for="email">Adresse Email</label>
+                        <div class="error-message">Veuillez entrer votre adresse email </div>
+                    </div>
+                    
+                    <div class="input-effect">
+                        <textarea id="message" name="message" rows="6" placeholder=" " required minlength="10" class="w-full"></textarea>
+                        <label for="message">Votre Message</label>
+                        <div class="error-message">Veuillez entrer votre message </div>
+                    </div>
+                    
+                    <button type="submit" class="neon-button w-full py-4 px-6 bg-purple-600 text-white rounded-lg font-semibold transition duration-300 transform hover:scale-105 text-lg">
+                        Envoyer le message
+                    </button>
+                </form>
+                
+                <div id="successMessage" class="success-message mt-6 text-center text-green-400 font-semibold hidden">
+                    Merci ! Votre message a été envoyé avec succès.
+                </div>
+            </div>
+        </div>
+        <div class="mobile-footer-message">
+            Visitez ce portfolio sur PC pour une meilleure expérience utilisateur
+        </div>
+        
+        <div id="Works" class="center-section hidden">
+            <div class="projects-container">
+                <div class="projects-header">
+                    <h1 class="projects-title">Mes Projets</h1>
+                    <p class="projects-subtitle">Accédez à mes travaux</p>
+                </div>
+                
+                <div class="project-card" onclick="window.open('https://feather-backpack-ea0.notion.site/Projets-AI-4158e4dc854e4aae8331667c8a538d0e?pvs=4', '_blank')">
+                    <i data-feather="book-open"></i>
+                    <h3 class="project-card-title">Mes Projets</h3>
+                    <p class="project-card-description">Explorer ma collection de projets basés sur la technologie de l'intelligence artificielle</p>
+                    <button class="project-card-button">Découvrir</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="right-nav">
+            <button class="nav-item active" data-section="About">
+                <i data-feather="user"></i>
+                <span>A propos</span>
+            </button>
+            <button class="nav-item" data-section="Resume">
+                <i data-feather="file"></i>
+                <span>Le CV</span>
+            </button>
+            <button class="nav-item" data-section="Works">
+                <i data-feather="briefcase"></i>
+                <span>Projets</span>
+            </button>
+            <button class="nav-item" data-section="Contact">
+                <i data-feather="mail"></i>
+                <span>Contact</span>
+            </button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
