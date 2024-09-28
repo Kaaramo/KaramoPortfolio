@@ -205,11 +205,11 @@ function initializeMobileMenu() {
 function animateClientLogos() {
     const logoSlides = document.querySelectorAll('.logo-slide');
     const logos = [
-        'https://i.imgur.com/WnROtRg.jpeg', // Fanta Condé
-        'https://i.imgur.com/hOWIkSr.jpeg', // Mr dremaxx
-        'https://i.imgur.com/XTuZafz.jpeg', // Karamoo Sangaré
-        'https://i.imgur.com/nYnqU36.jpeg', // Philipe Simo
-        'https://i.imgur.com/HAJRJeG.jpeg', // Antoine blanco
+        'https://i.imgur.com/K4pAS8b.jpeg', // Aiguebelle
+        'https://i.imgur.com/Es3O3mi.png', // Royal AIR Maroc
+        'https://i.imgur.com/msdBlbm.jpeg', // AFMA
+        'https://i.imgur.com/MwTbmzH.png', // Credit agricole du maroc
+        
     ];
 
     logos.forEach(logo => {
@@ -261,3 +261,5 @@ fetch(`${sectionName.toLowerCase()}.html`)
     }
 });
 }
+
+
